@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/people.json
+    body:
+      encoding: UTF-8
+      string: '{"first_name":"Gabriel","last_name":"Rodríguez","telephone":"917-919-375","email":"person193@example.com","born_at":"1984-10-29","gender":"m","account_id":146}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f964d3c17922537a43edb375841435fad3bff36fe36f3784b3546cf9b4c1956d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1a2cceaac84779f22b44db2253585cc0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b5307fb9-ccbd-441f-b612-ac91969f4d41
+      X-Runtime:
+      - '0.185319'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwZXJzb24iOnsiaWQiOjM1OTIsImZpcnN0X25hbWUiOiJHYWJyaWVsIiwi
+        bGFzdF9uYW1lIjoiUm9kcsOtZ3VleiIsImxpbmtzIjp7ImNvbnN1bHRhdGlv
+        bnMiOiIvYXBpL3YxL3Blb3BsZS8zNTkyL2NvbnN1bHRhdGlvbnMiLCJtZWRp
+        Y2FsX2hpc3RvcnkiOiIvYXBpL3YxL3Blb3BsZS8zNTkyL21lZGljYWxfaGlz
+        dG9yeSJ9LCJmdWxsX25hbWUiOiJHYWJyaWVsIFJvZHLDrWd1ZXoiLCJ0ZWxl
+        cGhvbmUiOiI5MTctOTE5LTM3NSIsImVtYWlsIjoicGVyc29uMTkzQGV4YW1w
+        bGUuY29tIiwiYm9ybl9hdCI6IjE5ODQtMTAtMjkiLCJnZW5kZXIiOiJtIiwi
+        YXZhdGFyX3VybF9zbWFsbCI6IiIsImF2YXRhcl91cmxfbWVkaXVtIjoiIiwi
+        dGVsZXBob25lMiI6bnVsbCwiYWRkcmVzc19jaXR5IjpudWxsLCJhZGRyZXNz
+        X3N0cmVldCI6bnVsbCwiYWRkcmVzc196aXBjb2RlIjpudWxsLCJhZGRyZXNz
+        X3N0YXRlIjpudWxsLCJhZGRyZXNzX2NvdW50cnkiOm51bGwsImFjY291bnRf
+        aWQiOjEsImF2YXRhcl91cmxfbGFyZ2UiOiIifX0=
+    http_version: 
+  recorded_at: Thu, 31 Dec 2015 22:08:33 GMT
+- request:
+    method: put
+    uri: http://localhost:5000/api/v1/people/3592.json
+    body:
+      encoding: UTF-8
+      string: '{"first_name":"Foo"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f964d3c17922537a43edb375841435fad3bff36fe36f3784b3546cf9b4c1956d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"80dec4d1c2ef57de6d00ae900e5947f3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 866dae7b-6308-4ee8-b28b-be9949ee3b40
+      X-Runtime:
+      - '0.057763'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwZXJzb24iOnsiaWQiOjM1OTIsImZpcnN0X25hbWUiOiJGb28iLCJsYXN0
+        X25hbWUiOiJSb2Ryw61ndWV6IiwibGlua3MiOnsiY29uc3VsdGF0aW9ucyI6
+        Ii9hcGkvdjEvcGVvcGxlLzM1OTIvY29uc3VsdGF0aW9ucyIsIm1lZGljYWxf
+        aGlzdG9yeSI6Ii9hcGkvdjEvcGVvcGxlLzM1OTIvbWVkaWNhbF9oaXN0b3J5
+        In0sImZ1bGxfbmFtZSI6IkZvbyBSb2Ryw61ndWV6IiwidGVsZXBob25lIjoi
+        OTE3LTkxOS0zNzUiLCJlbWFpbCI6InBlcnNvbjE5M0BleGFtcGxlLmNvbSIs
+        ImJvcm5fYXQiOiIxOTg0LTEwLTI5IiwiZ2VuZGVyIjoibSIsImF2YXRhcl91
+        cmxfc21hbGwiOiIiLCJhdmF0YXJfdXJsX21lZGl1bSI6IiIsInRlbGVwaG9u
+        ZTIiOm51bGwsImFkZHJlc3NfY2l0eSI6bnVsbCwiYWRkcmVzc19zdHJlZXQi
+        Om51bGwsImFkZHJlc3NfemlwY29kZSI6bnVsbCwiYWRkcmVzc19zdGF0ZSI6
+        bnVsbCwiYWRkcmVzc19jb3VudHJ5IjpudWxsLCJhY2NvdW50X2lkIjoxLCJh
+        dmF0YXJfdXJsX2xhcmdlIjoiIn19
+    http_version: 
+  recorded_at: Thu, 31 Dec 2015 22:08:33 GMT
+recorded_with: VCR 3.0.1
