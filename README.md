@@ -65,6 +65,13 @@ Retrieve a consultation.
 ```ruby
 client.consultations!('1')
 ```
+
+Finish a consultation.
+
+```ruby
+client.consultations.finish('1')
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

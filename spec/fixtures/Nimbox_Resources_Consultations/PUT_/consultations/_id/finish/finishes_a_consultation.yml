@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/consultations.json
+    body:
+      encoding: UTF-8
+      string: '{"cause":"nemo","person_id":3591}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer fc04c761eb3b07adcc76f89c12f59f079700c4b6214f0530382d10339a327950
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4055c51054819e7bc722d58a7fa6e131"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ec4c5702-09b0-44a2-a40b-b146d323763c
+      X-Runtime:
+      - '0.099524'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"consultation":{"id":4360,"cause":"nemo","created_at":"2016-01-16
+        14:25:02-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4360/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4360/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4360/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4360/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4360/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
+    http_version: 
+  recorded_at: Sat, 16 Jan 2016 20:25:02 GMT
+- request:
+    method: put
+    uri: http://localhost:5000/api/v1/consultations/4360/finish.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Bearer fc04c761eb3b07adcc76f89c12f59f079700c4b6214f0530382d10339a327950
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"13ba316f328af1a875931d0c0838fee3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 700f8cb4-93b1-4ece-a11c-cdfb0f576601
+      X-Runtime:
+      - '0.171523'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"consultation":{"id":4360,"cause":"nemo","created_at":"2016-01-16
+        14:25:02-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4360/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4360/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4360/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4360/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4360/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":"2016-01-16T14:25:02.629-06:00"}}'
+    http_version: 
+  recorded_at: Sat, 16 Jan 2016 20:25:02 GMT
+recorded_with: VCR 3.0.1

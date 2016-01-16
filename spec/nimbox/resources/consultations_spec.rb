@@ -40,4 +40,14 @@ describe Nimbox::Resources::Consultations, :vcr do
       expect(response['consultation']['cause']).to eq('Foo')
     end
   end
+
+  describe 'PUT /consultations/:id/finish' do
+    it 'finishes a consultation' do
+      id = client.consultations.create!(attributes)['consultation']['id']
+
+      response = client.consultations.finish(id)['consultation']
+
+      expect(response).to have_key('id')
+    end
+  end
 end
