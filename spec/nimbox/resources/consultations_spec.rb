@@ -13,6 +13,8 @@ describe Nimbox::Resources::Consultations, :vcr do
     }
   end
 
+  let(:consultation) { client.consultations.create!(attributes)['consultation'] }
+
   describe 'POST /consultations' do
     it 'creates a consultation' do
       response = client.consultations.create!(attributes)
@@ -23,29 +25,24 @@ describe Nimbox::Resources::Consultations, :vcr do
 
   describe 'GET /consultations/:id' do
     it 'retrieves a consultation' do
-      id = client.consultations.create!(attributes)['consultation']['id']
+      response = client.consultations!(consultation['id'])['consultation']
 
-      response = client.consultations!(id)
-
-      expect(response['consultation']['id']).to eq(id)
+      expect(response['id']).to eq(consultation['id'])
     end
   end
 
   describe 'PUT /consultations/:id' do
     it 'updates a consultation' do
-      id = client.consultations.create!(attributes)['consultation']['id']
+      response = client.consultations(consultation['id'])
+        .update!(cause: 'Foo')['consultation']
 
-      response = client.consultations(id).update!(cause: 'Foo')
-
-      expect(response['consultation']['cause']).to eq('Foo')
+      expect(response['cause']).to eq('Foo')
     end
   end
 
   describe 'PUT /consultations/:id/finish' do
     it 'finishes a consultation' do
-      id = client.consultations.create!(attributes)['consultation']['id']
-
-      response = client.consultations.finish(id)['consultation']
+      response = client.consultations.finish(consultation['id'])['consultation']
 
       expect(response).to have_key('id')
     end

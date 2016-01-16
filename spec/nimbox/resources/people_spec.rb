@@ -18,6 +18,8 @@ describe Nimbox::Resources::People, :vcr do
     }
   end
 
+  let(:person) { client.people.create!(attributes)['person'] }
+
   describe 'POST /people' do
     it 'creates a person' do
       response = client.people.create!(attributes)
@@ -28,19 +30,15 @@ describe Nimbox::Resources::People, :vcr do
 
   describe 'GET /people/:id' do
     it 'retrieves a person' do
-      id = client.people.create!(attributes)['person']['id']
+      response = client.people!(person['id'])
 
-      response = client.people!(id)
-
-      expect(response['person']['id']).to eq(id)
+      expect(response['person']['id']).to eq(person['id'])
     end
   end
 
   describe 'PUT /people/:id' do
     it 'updates a person' do
-      id = client.people.create!(attributes)['person']['id']
-
-      response = client.people(id).update!(first_name: 'Foo')
+      response = client.people(person['id']).update!(first_name: 'Foo')
 
       expect(response['person']['first_name']).to eq('Foo')
     end
