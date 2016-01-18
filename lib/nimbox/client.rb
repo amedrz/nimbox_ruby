@@ -10,6 +10,9 @@ module Nimbox
 
     resource :people, class_name: Nimbox::Resources::People
     resource :consultations, class_name: Nimbox::Resources::Consultations
+    resource :consultation_diagnostics,
+      class_name: Nimbox::Resources::ConsultationDiagnostics
+    resource :diagnostics, class_name: Nimbox::Resources::Diagnostics
 
     def initialize(options={})
       options[:site] = options[:site]

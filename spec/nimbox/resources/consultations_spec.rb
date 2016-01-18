@@ -47,4 +47,20 @@ describe Nimbox::Resources::Consultations, :vcr do
       expect(response).to have_key('id')
     end
   end
+
+  describe 'GET /consultations/:id/consultation_diagnostics' do
+    before do
+      client.consultation_diagnostics.create!(
+        consultation_id: consultation[:id],
+        diagnostic_id: 1
+      )
+    end
+
+    it 'fetches diagnostics', vcr: { match_requests_on: [:method] } do
+      response = client.consultations.diagnostics(consultation['id'])
+      response = response['consultation_diagnostics'][0]
+
+      expect(response).to have_key('id')
+    end
+  end
 end

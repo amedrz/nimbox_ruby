@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/consultations.json
+    body:
+      encoding: UTF-8
+      string: '{"cause":"nemo","person_id":3591}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f08a6063fb0c269ce86efec0e185c221599086e411bfebc4855f1379ef5b124a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"95dfb9c07d9031f25528c2ba227e4731"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7e1e25d1-0b85-47eb-b247-2885488d82d2
+      X-Runtime:
+      - '0.051652'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"consultation":{"id":4366,"cause":"nemo","created_at":"2016-01-16
+        22:20:20-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4366/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4366/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4366/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4366/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4366/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
+    http_version: 
+  recorded_at: Sun, 17 Jan 2016 04:20:20 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/consultation_diagnostics.json
+    body:
+      encoding: UTF-8
+      string: '{"consultation_id":4366,"diagnostic_id":1}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f08a6063fb0c269ce86efec0e185c221599086e411bfebc4855f1379ef5b124a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e729f3bdaadeb475e7272bff68e8748a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 60792f96-acb1-4804-9a66-f9d234e9da15
+      X-Runtime:
+      - '0.033789'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"consultation_diagnostic":{"id":2672,"consultation_id":4366,"diagnostic_id":1}}'
+    http_version: 
+  recorded_at: Sun, 17 Jan 2016 04:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/consultations/4366/consultation_diagnostics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f08a6063fb0c269ce86efec0e185c221599086e411bfebc4855f1379ef5b124a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2a4e7512e37bc895724f02dc342876b9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fe01c77a-c5ec-41fb-aaf4-187c732e2905
+      X-Runtime:
+      - '0.053647'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"consultation_diagnostics":[{"id":2672,"consultation_id":4366,"diagnostic_id":1}]}'
+    http_version: 
+  recorded_at: Sun, 17 Jan 2016 04:20:20 GMT
+recorded_with: VCR 3.0.1
