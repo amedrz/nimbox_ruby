@@ -21,6 +21,15 @@ describe Nimbox::Resources::Consultations, :vcr do
 
       expect(response['consultation']).to have_key('id')
     end
+
+    it 'doesn\'t create a consultation' do
+      attributes.delete(:cause)
+
+      expect { client.consultations.create!(attributes) }.to raise_error { |error|
+        expect(error).to be_a Nimbox::ResponseError
+        expect(error.status).to eq 422
+      }
+    end
   end
 
   describe 'GET /consultations/:id' do

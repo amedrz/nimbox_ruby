@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/consultations.json
+    body:
+      encoding: UTF-8
+      string: '{"person_id":3591}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 6bb7ea1be8ab7928e227929c355055cb80053d3439e9719c520396122d8a16cf
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 22c42b08-31a9-4028-9cd0-48883cc5c9fb
+      X-Runtime:
+      - '0.044119'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"cause":["no puede estar en blanco"]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 15:48:25 GMT
+recorded_with: VCR 3.0.1

@@ -23,3 +23,4 @@ module Nimbox
     end
   end
 end
+Rapidash.response_exception_class = Nimbox::ResponseError

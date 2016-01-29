@@ -26,6 +26,15 @@ describe Nimbox::Resources::People, :vcr do
 
       expect(response['person']).to have_key('id')
     end
+
+    it 'doesn\'t create a person' do
+      attributes.delete(:first_name)
+
+      expect { client.people.create!(attributes) }.to raise_error { |error|
+        expect(error).to be_a Nimbox::ResponseError
+        expect(error.status).to eq 422
+      }
+    end
   end
 
   describe 'GET /people/:id' do

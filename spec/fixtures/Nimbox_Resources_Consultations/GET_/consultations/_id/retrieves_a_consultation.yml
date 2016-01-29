@@ -12,7 +12,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer f08a6063fb0c269ce86efec0e185c221599086e411bfebc4855f1379ef5b124a
+      - Bearer 6bb7ea1be8ab7928e227929c355055cb80053d3439e9719c520396122d8a16cf
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -31,24 +31,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"fa8f4839349b12bce95b7304676769cd"
+      - W/"db77862284f45b55b1edca658867af18"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2e34838b-9375-4a21-8a1a-7f068c1ba8ef
+      - 74ba4ecf-beaa-4ede-8ffc-d293f497bdb2
       X-Runtime:
-      - '0.128920'
+      - '0.052098'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"consultation":{"id":4365,"cause":"nemo","created_at":"2016-01-16
-        22:19:50-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4365/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4365/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4365/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4365/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4365/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
+      string: '{"consultation":{"id":4370,"cause":"nemo","created_at":"2016-01-29
+        09:48:25-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4370/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4370/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4370/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4370/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4370/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
     http_version: 
-  recorded_at: Sun, 17 Jan 2016 04:19:50 GMT
+  recorded_at: Fri, 29 Jan 2016 15:48:25 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/consultations/4365.json
+    uri: http://localhost:5000/api/v1/consultations/4370.json
     body:
       encoding: US-ASCII
       string: ''
@@ -58,7 +58,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer f08a6063fb0c269ce86efec0e185c221599086e411bfebc4855f1379ef5b124a
+      - Bearer 6bb7ea1be8ab7928e227929c355055cb80053d3439e9719c520396122d8a16cf
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -77,19 +77,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"fa8f4839349b12bce95b7304676769cd"
+      - W/"db77862284f45b55b1edca658867af18"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 05523dc0-b46f-4f45-9d4e-c2af75e50f39
+      - 31625156-3b4d-4da3-835e-cb0f3d8504f7
       X-Runtime:
-      - '0.037059'
+      - '0.632179'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"consultation":{"id":4365,"cause":"nemo","created_at":"2016-01-16
-        22:19:50-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4365/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4365/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4365/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4365/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4365/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
+      string: '{"consultation":{"id":4370,"cause":"nemo","created_at":"2016-01-29
+        09:48:25-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4370/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4370/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4370/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4370/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4370/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
     http_version: 
-  recorded_at: Sun, 17 Jan 2016 04:19:50 GMT
+  recorded_at: Fri, 29 Jan 2016 15:48:25 GMT
 recorded_with: VCR 3.0.1

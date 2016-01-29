@@ -12,7 +12,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer f964d3c17922537a43edb375841435fad3bff36fe36f3784b3546cf9b4c1956d
+      - Bearer 6bb7ea1be8ab7928e227929c355055cb80053d3439e9719c520396122d8a16cf
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -31,24 +31,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f8a049bcd4b91852cb8ad79fbbf6a374"
+      - W/"c746f8e7fd9d0791c0c090eb94c3194b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ac122679-e1cf-4045-8d2a-f8a0eb89e70a
+      - 3e25f786-22e8-4f85-b8aa-4e1aa63a6134
       X-Runtime:
-      - '0.046961'
+      - '0.153301'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"consultation":{"id":4344,"cause":"nemo","created_at":"2015-12-31
-        16:09:35-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4344/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4344/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4344/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4344/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4344/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null}}'
+      string: '{"consultation":{"id":4371,"cause":"nemo","created_at":"2016-01-29
+        09:48:26-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4371/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4371/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4371/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4371/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4371/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
     http_version: 
-  recorded_at: Thu, 31 Dec 2015 22:09:35 GMT
+  recorded_at: Fri, 29 Jan 2016 15:48:26 GMT
 - request:
     method: put
-    uri: http://localhost:5000/api/v1/consultations/4344.json
+    uri: http://localhost:5000/api/v1/consultations/4371.json
     body:
       encoding: UTF-8
       string: '{"cause":"Foo"}'
@@ -58,7 +58,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer f964d3c17922537a43edb375841435fad3bff36fe36f3784b3546cf9b4c1956d
+      - Bearer 6bb7ea1be8ab7928e227929c355055cb80053d3439e9719c520396122d8a16cf
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -77,18 +77,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7049b1fc7556120825b3ef7052d6cff9"
+      - W/"795b00988dba988fd650ef230b529674"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5f760402-56f4-47c3-9214-0c5efbac40b3
+      - e94b7749-6f34-41ed-91ad-345476307457
       X-Runtime:
-      - '0.055113'
+      - '0.049491'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"consultation":{"id":4344,"cause":"Foo","created_at":"2015-12-31 16:09:35-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4344/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4344/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4344/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4344/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4344/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null}}'
+      string: '{"consultation":{"id":4371,"cause":"Foo","created_at":"2016-01-29 09:48:26-0600","links":{"person":"/api/v1/people/3591","physical_test_samples":"/api/v1/consultations/4371/physical_test_samples","consultation_diagnostics":"/api/v1/consultations/4371/consultation_diagnostics","consultation_lab_tests":"/api/v1/consultations/4371/consultation_lab_tests","consultation_prescription_drugs":"/api/v1/consultations/4371/consultation_prescription_drugs","vital_signs_set":"/api/v1/consultations/4371/vital_signs_set"},"medical_instructions":null,"physical_examination":null,"subjective_symptoms":null,"cause_extended":null,"account_id":1,"consultation_schedule_id":null,"finished_at":null}}'
     http_version: 
-  recorded_at: Thu, 31 Dec 2015 22:09:35 GMT
+  recorded_at: Fri, 29 Jan 2016 15:48:26 GMT
 recorded_with: VCR 3.0.1
